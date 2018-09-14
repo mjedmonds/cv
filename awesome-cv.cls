@@ -50,6 +50,8 @@
 \RequirePackage{array}
 % Needed to handle list environment
 \RequirePackage{enumitem}
+% Needed to handle reverse list environment
+\RequirePackage{etaremune}
 % Needed to handle text alignment
 \RequirePackage{ragged2e}
 % Needed to configure page layout
@@ -209,10 +211,11 @@
 \newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
 % For elements of publication
+\newcommand*{\publicationenumeratestyle}{\fontsize{9pt}{1em}\bodyfont\color{darktext}}
 \newcommand*{\publicationtitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\publicationauthorstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{darktext} #1}}
 \newcommand*{\publicationconferencestyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
-\newcommand*{\publicationawardstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
+\newcommand*{\publicationawardstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\bfseries\slshape\color{graytext} #1}}
 
 % For elements of subentry
 \newcommand*{\subentrytitlestyle}[1]{{\fontsize{8pt}{1em}\bodyfont\mdseries\color{graytext} #1}}
@@ -403,7 +406,6 @@
 % Use to execute conditional statements by checking empty string
 \newcommand*{\ifempty}[3]{\ifthenelse{\isempty{#1}}{#2}{#3}}
 
-
 %-------------------------------------------------------------------------------
 %                Commands for elements of CV structure
 %-------------------------------------------------------------------------------
@@ -572,16 +574,28 @@
   \end{center}
 }
 
+\newenvironment{pubenumerate}
+  {\renewcommand\labelenumi{\publicationenumeratestyle[\theenumi]}
+   \etaremune[
+     topsep=0pt,
+     itemsep=0pt,
+     parsep=0pt,partopsep=0pt,
+     itemindent=0pt,
+     leftmargin={\achPublicationEnumerateSep}]}
+  {\endetaremune}
+
 % Define an environment for cventry
 \newenvironment{cvpublications}{%
   \vspace{\acvSectionContentTopSkip}
   \begin{center}
-  \begin{enumerate}[leftmargin=\achPublicationEnumerateSep, nosep, noitemsep]
+  % \begin{pubenumerate}[leftmargin=\achPublicationEnumerateSep, nosep, noitemsep, font=\publicationenumeratestyle, label={[\arabic*]}]
+  \begin{pubenumerate}
     \setlength{\parskip}{0pt}
 }{%
-  \end{enumerate}
+  \end{pubenumerate}
   \end{center}
 }
+% \renewcommand{enumerate}{\begin{etaremune}}{\end{etaremune}}
 
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
@@ -605,7 +619,8 @@
   \vspace{-2.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
-  \begin{minipage}[t][][t]{\textwidth - \achPublicationEnumerateSep}\vspace{-10pt}
+  % todo: magical -9.4pt in vspace is hacky
+  \begin{minipage}[t]{\textwidth - \achPublicationEnumerateSep}\vspace{-9.35pt}
   % \begin{tabular*}{\textwidth - \achPublicationEnumerateSep}{@{\extracolsep{\fill}} L{\textwidth - \achPublicationEnumerateSep - 1.5cm} R{1.5cm}}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 1.5cm} R{1.5cm}}
       \publicationauthorstyle{#2} & \publicationconferencestyle{#3} \\
