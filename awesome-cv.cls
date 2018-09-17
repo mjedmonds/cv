@@ -211,6 +211,7 @@
 \newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
 % For elements of publication
+\newcommand*{\publicationcontributionstyle}{\fontsize{7pt}{1em}\bodyfont\color{graytext}}
 \newcommand*{\publicationenumeratestyle}{\fontsize{9pt}{1em}\bodyfont\color{darktext}}
 \newcommand*{\publicationtitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\publicationauthorstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{darktext} #1}}
@@ -399,6 +400,10 @@
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+% Use to align an element of tabular table
+\newcolumntype{Q}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{W}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{E}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 
 % Use to draw horizontal line with specific thickness
 \def\vhrulefill#1{\leavevmode\leaders\hrule\@height#1\hfill \kern\z@}
@@ -619,14 +624,22 @@
   \vspace{-2.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
-  % todo: magical -9.4pt in vspace is hacky
+  % todo: magical number in vspace is hacky
   \begin{minipage}[t]{\textwidth - \achPublicationEnumerateSep}\vspace{-9.35pt}
   % \begin{tabular*}{\textwidth - \achPublicationEnumerateSep}{@{\extracolsep{\fill}} L{\textwidth - \achPublicationEnumerateSep - 1.5cm} R{1.5cm}}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 1.5cm} R{1.5cm}}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} Q{\textwidth - 1.7cm} E{1.7cm}}
       \publicationauthorstyle{#2} & \publicationconferencestyle{#3} \\
       \publicationtitlestyle{#1} & \publicationawardstyle{#4}\\
   \end{tabular*}%
   \end{minipage}
+}
+
+\newcommand*{\cvequalcontribution}{
+  % equal contributors
+  \vspace{-10pt} 
+  \begin{flushright} 
+    \publicationcontributionstyle (* indicates equal contribution)
+  \end{flushright}
 }
 
 % Define an environment for cvsubentry
