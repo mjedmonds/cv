@@ -126,8 +126,10 @@
 \definecolor{white}{HTML}{FFFFFF}
 \definecolor{black}{HTML}{000000}
 \definecolor{darkgray}{HTML}{333333}
-\definecolor{gray}{HTML}{5D5D5D}
-\definecolor{lightgray}{HTML}{999999}
+% \definecolor{gray}{HTML}{5D5D5D}
+\definecolor{gray}{HTML}{444444}
+% \definecolor{lightgray}{HTML}{999999}
+\definecolor{lightgray}{HTML}{7A7A7A}
 % Basic colors
 \definecolor{green}{HTML}{C2E15F}
 \definecolor{orange}{HTML}{FDA333}
@@ -613,8 +615,8 @@
       {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
       {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
       \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-    % \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}} & 
-    \descriptionstyle{#5} & 
+    % \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}} &
+    \descriptionstyle{#5} &
   \end{tabular*}%
 }
 
@@ -636,8 +638,8 @@
 
 \newcommand*{\cvequalcontribution}{
   % equal contributors
-  \vspace{-10pt} 
-  \begin{flushright} 
+  \vspace{-10pt}
+  \begin{flushright}
     \publicationcontributionstyle (* indicates equal contribution)
   \end{flushright}
 }
