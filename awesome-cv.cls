@@ -391,8 +391,8 @@
 \newcommand{\achPublicationEnumerateSep}{0.05\textwidth}
 
 % Others
-\newcommand{\acvSectionTopSkip}{1.5mm}
-\newcommand{\acvSectionContentTopSkip}{3mm}
+\newcommand{\acvSectionTopSkip}{1.2mm}
+\newcommand{\acvSectionContentTopSkip}{2mm}
 
 
 %-------------------------------------------------------------------------------
@@ -607,7 +607,7 @@
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
 \newcommand*{\cventry}[5]{%
-  \vspace{-2.0mm}
+  \vspace{-2mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 3cm} R{3cm}}
