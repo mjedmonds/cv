@@ -170,7 +170,7 @@
 % Set the FontAwesome font to be up-to-date.
 \newfontfamily\FA[Path=\@fontdir]{FontAwesome}
 % Set font for header (default is Roboto)
-\newfontfamily\headerfont[
+\newfontfamily\roboto[
   Path=\@fontdir,
   UprightFont=*-Regular,
   ItalicFont=*-Italic,
@@ -178,29 +178,13 @@
   BoldItalicFont=*-BoldItalic,
 ]{Roboto}
 
-\newfontfamily\headerfontlight[
+\newfontfamily\robotolight[
   Path=\@fontdir,
   UprightFont=*-Thin,
   ItalicFont=*-ThinItalic,
   BoldFont=*-Medium,
   BoldItalicFont=*-MediumItalic,
 ]{Roboto}
-
-% Georgia
-% \newfontfamily\headerfont[
-%   Path=\@fontdir,
-%   UprightFont=*-regular,
-%   ItalicFont=*-italic,
-%   BoldFont=*-bold,
-%   BoldItalicFont=*-bold-italic,
-% ]{Georgia}
-% \newfontfamily\headerfontlight[
-%   Path=\@fontdir,
-%   UprightFont=*-regular,
-%   ItalicFont=*-italic,
-%   BoldFont=*-bold,
-%   BoldItalicFont=*-bold-italic,
-% ]{Georgia}
 
 \newfontfamily\georgia[
   Path=\@fontdir,
@@ -219,13 +203,54 @@
   Path=\@fontdir,
 ]{TimesNewRoman}
 
+\newfontfamily\trebuchetms[
+  Path=\@fontdir,
+  UprightFont=*-Regular,
+  ItalicFont=*-Italic,
+  BoldFont=*-Bold,
+  BoldItalicFont=*-BoldItalic,
+  Path=\@fontdir,
+]{TrebuchetMS}
 
+\newfontfamily\avenirnext[
+  Path=\@fontdir,
+  UprightFont=*-Regular,
+  ItalicFont=*-Italic,
+  BoldFont=*-Bold,
+  BoldItalicFont=*-BoldItalic,
+  Path=\@fontdir,
+]{AvenirNext}
+
+\newfontfamily\avenirnextlight[
+  Path=\@fontdir,
+  UprightFont=*-UltraLight,
+  ItalicFont=*-UltraLightItalic,
+  BoldFont=*-Medium,
+  BoldItalicFont=*-MediumItalic,
+]{AvenirNext}
+
+\newfontfamily\helvetica[
+  Path=\@fontdir,
+  UprightFont=*-Regular,
+  ItalicFont=*-Italic,
+  BoldFont=*-Bold,
+  BoldItalicFont=*-BoldItalic,
+  Path=\@fontdir,
+]{Helvetica}
+
+% set font for main
 % \renewcommand{\fontchoice}{\georgia}
 % \renewcommand{\fontchoicelight}{\georgia}
-\renewcommand{\fontchoice}{\timesnewroman}
-\renewcommand{\fontchoicelight}{\timesnewroman}
+%\renewcommand{\fontchoice}{\timesnewroman}
+%\renewcommand{\fontchoicelight}{\timesnewroman}
 % \renewcommand{\fontchoice}{\sourcesanspro}
 % \renewcommand{\fontchoicelight}{\sourcesansprolight}
+\newcommand*{\fontchoice}{\timesnewroman}
+\newcommand*{\fontchoicelight}{\timesnewroman}
+
+% set font for header
+\newcommand*{\headerfont}{\georgia}
+\newcommand*{\headerfontlight}{\georgia}
 
 \newcommand*{\footerfont}{\fontchoice}
 \newcommand*{\bodyfont}{\fontchoice}
