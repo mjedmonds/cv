@@ -704,6 +704,8 @@
     % \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}} &
     \descriptionstyle{#5} &
   \end{tabular*}%
+  % if you want to have the description not be part of the tabular, comment above and uncomment this
+  % \descriptionstyle{#5}
 }
 
 % Define a publication of cv information
