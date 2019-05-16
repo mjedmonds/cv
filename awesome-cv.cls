@@ -236,15 +236,21 @@
   Path=\@fontdir,
 ]{Helvetica}
 
-% set font for main
-% \renewcommand{\fontchoice}{\georgia}
-% \renewcommand{\fontchoicelight}{\georgia}
-%\renewcommand{\fontchoice}{\timesnewroman}
-%\renewcommand{\fontchoicelight}{\timesnewroman}
+\newfontfamily\garamond[
+  Path=\@fontdir,
+  UprightFont=*-Regular,
+  ItalicFont=*-Italic,
+  BoldFont=*-Bold,
+  BoldItalicFont=*-BoldItalic,
+  Path=\@fontdir,
+]{AGaramondPro}
+
+
+% set font for main (original is sourcesanspro)
 % \renewcommand{\fontchoice}{\sourcesanspro}
 % \renewcommand{\fontchoicelight}{\sourcesansprolight}
-\newcommand*{\fontchoice}{\sourcesanspro}
-\newcommand*{\fontchoicelight}{\sourcesanspro}
+\newcommand*{\fontchoice}{\garamond}
+\newcommand*{\fontchoicelight}{\garamond}
 
 % set font for header
 \newcommand*{\headerfont}{\roboto}
@@ -259,10 +265,10 @@
 %-------------------------------------------------------------------------------
 % Configure styles for each CV elements
 % For fundamental structures
-\newcommand*{\headerfirstnamestyle}[1]{{\hspace{-8pt}\fontsize{28pt}{1em}\headerfontlight\color{graytext} #1}}
+\newcommand*{\headerfirstnamestyle}[1]{{\hspace{-8pt}\fontsize{28pt}{1em}\headerfontlight\color{text} #1}}
 \newcommand*{\headerlastnamestyle}[1]{{\fontsize{28pt}{1em}\headerfont\bfseries\color{text} #1}}
-\newcommand*{\headerpositionstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{awesome} #1}}
-\newcommand*{\headeraddressstyle}[1]{{\fontsize{8pt}{1em}\headerfont\itshape\color{lighttext} #1}}
+\newcommand*{\headerpositionstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{text} #1}}
+\newcommand*{\headeraddressstyle}[1]{{\fontsize{8pt}{1em}\headerfont\itshape\color{text} #1}}
 \newcommand*{\headersocialstyle}[1]{{\fontsize{6.8pt}{1em}\headerfont\color{text} #1}}
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\color{lighttext} #1}}
@@ -280,7 +286,9 @@
 % For elements of publication
 \newcommand*{\publicationcontributionstyle}{\fontsize{7pt}{1em}\bodyfont\color{text}}
 \newcommand*{\publicationenumeratestyle}{\fontsize{9pt}{1em}\bodyfont\color{text}}
-\newcommand*{\publicationtitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{text} #1}}
+% title with or without italics
+% \newcommand*{\publicationtitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{text} #1}}
+\newcommand*{\publicationtitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{text} #1}}
 \newcommand*{\publicationauthorstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{text} #1}}
 \newcommand*{\publicationconferencestyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{text} #1}}
 \newcommand*{\publicationawardstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\bfseries\slshape\color{text} #1}}
@@ -707,10 +715,11 @@
   % todo: magical number in vspace is hacky
   \begin{minipage}[t]{\textwidth - \achPublicationEnumerateSep}\vspace{-9.35pt}
   % \begin{tabular*}{\textwidth - \achPublicationEnumerateSep}{@{\extracolsep{\fill}} L{\textwidth - \achPublicationEnumerateSep - 1.5cm} R{1.5cm}}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} Q{\textwidth - 1.7cm} E{1.7cm}}
-      \publicationauthorstyle{#2} & \publicationconferencestyle{#3} \\
-      \publicationtitlestyle{#1} & \publicationawardstyle{#4}\\
-  \end{tabular*}%
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} Q{\textwidth - 1.8cm} E{1.8cm}}
+      \publicationauthorstyle{#2} & \publicationawardstyle{#4}
+  \end{tabular*}
+  \\
+  ``\publicationtitlestyle{#1},'' \publicationconferencestyle{#3}
   \end{minipage}
 }
 
@@ -786,7 +795,7 @@
 \newenvironment{cvitems}{%
   \vspace{-4.0mm}
   \begin{justify}
-  \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
+  \begin{itemize}[leftmargin=4ex, nosep, noitemsep]
     \setlength{\parskip}{0pt}
     \renewcommand{\labelitemi}{\bullet}
 }{%
