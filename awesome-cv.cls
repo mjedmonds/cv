@@ -721,6 +721,7 @@
       \publicationauthorstyle{#2} & \publicationawardstyle{#4}
   \end{tabular*}
   \\
+  % this can be moved inside of the tabular if desired
   ``\publicationtitlestyle{#1},'' \publicationconferencestyle{#3}
   \end{minipage}
 }
