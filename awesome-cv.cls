@@ -711,7 +711,7 @@
 % Define a publication of cv information
 % Usage: \cvpublication{<publication title>}{<authors>}{<conference>}{<awards>}
 \newcommand*{\cvpublication}[4]{%
-  \vspace{-2.0mm}
+  % \vspace{-2.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   % todo: magical number in vspace is hacky
