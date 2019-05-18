@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.4.16)  15 MAY 2019 23:15
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.4.16)  18 MAY 2019 14:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1063,7 +1063,7 @@ LaTeX Font Info:    Font shape `TU/AGaramondPro(0)/m/sl' in size <9> not availab
 LaTeX Font Info:    Font shape `TU/AGaramondPro(0)/m/sl' in size <8> not available
 (Font)              Font shape `TU/AGaramondPro(0)/m/it' tried instead on input line 24.
 ) (./cv-sections/research-interests.tex
-Overfull \hbox (65.28366pt too wide) in alignment at lines 11--33
+Overfull \hbox (73.26619pt too wide) in alignment at lines 11--33
 [] [] 
  []
 
@@ -1108,7 +1108,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--49
 ) (./cv-sections/research.tex [1
 
 ]) (./cv-sections/experience.tex) (./cv-sections/skills.tex
-Overfull \hbox (22.63365pt too wide) in alignment at lines 11--33
+Overfull \hbox (30.61618pt too wide) in alignment at lines 11--33
 [] [] 
  []
 
@@ -1124,7 +1124,7 @@ Package rerunfilecheck Info: File `resume_cv.out' has not changed.
 Here is how much of TeX's memory you used:
  38245 strings out of 492970
  758486 string characters out of 6133938
- 967931 words of memory out of 5000000
+ 967933 words of memory out of 5000000
  41671 multiletter control sequences out of 15000+600000
  532922 words of font info for 107 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191

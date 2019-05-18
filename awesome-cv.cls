@@ -781,9 +781,9 @@
   \vspace{\acvSectionContentTopSkip}
   \vspace{-2.0mm}
   \begin{center}
-    \setlength\tabcolsep{1ex}
+    \setlength\tabcolsep{1.5ex}
     \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth * \real{0.9}}}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l L{\textwidth * \real{0.9}}}
 }{%
     \end{tabular*}
   \end{center}
