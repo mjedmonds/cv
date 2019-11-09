@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.4.16)  4 JUN 2019 22:37
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.4.16)  8 NOV 2019 17:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1101,7 +1101,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--42
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
@@ -1112,7 +1117,7 @@ Overfull \hbox (30.61618pt too wide) in alignment at lines 11--33
 [] [] 
  []
 
-) (./cv-sections/honors.tex) (./cv-sections/presentation.tex) [2]
+) (./cv-sections/honors.tex) (./cv-sections/presentation.tex [2]) [3]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 100.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 100.
  (./resume_cv.aux)
@@ -1128,6 +1133,6 @@ Here is how much of TeX's memory you used:
  41671 multiletter control sequences out of 15000+600000
  532922 words of font info for 107 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 72i,11n,89p,10502b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,12n,89p,10502b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on resume_cv.pdf (2 pages).
+Output written on resume_cv.pdf (3 pages).
