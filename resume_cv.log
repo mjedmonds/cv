@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.4.16)  6 DEC 2019 17:44
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.4.16)  21 DEC 2019 20:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1075,6 +1075,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
 ) (./cv-sections/conferencepubs.tex
 Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
@@ -1115,29 +1120,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
-) (./cv-sections/research.tex [1
+) [1
 
-]) (./cv-sections/experience.tex) (./cv-sections/skills.tex
+] (./cv-sections/research.tex) (./cv-sections/experience.tex) (./cv-sections/skills.tex
 Overfull \hbox (30.61618pt too wide) in alignment at lines 11--33
 [] [] 
  []
 
-) (./cv-sections/honors.tex) (./cv-sections/presentation.tex [2]) [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 100.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 100.
+) (./cv-sections/honors.tex) [2] (./cv-sections/presentation.tex) [3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 102.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 102.
  (./resume_cv.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 100.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 100.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 102.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 102.
 Package rerunfilecheck Info: File `resume_cv.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E.
  ) 
 Here is how much of TeX's memory you used:
  38245 strings out of 492970
  758486 string characters out of 6133938
- 967933 words of memory out of 5000000
+ 966933 words of memory out of 5000000
  41671 multiletter control sequences out of 15000+600000
  532922 words of font info for 107 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 72i,12n,89p,10502b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,11n,89p,10502b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on resume_cv.pdf (3 pages).
