@@ -619,7 +619,7 @@
   % \begin{minipage}[c]{\headerphotowidth}%
     % \ifthenelse{\equal{\@photoalign}{right}}{\raggedleft\drawphoto}{}
   % \end{minipage}
-  \vspace{3mm}
+  \vspace{6mm}
 }
 
 % Define a footer for CV
