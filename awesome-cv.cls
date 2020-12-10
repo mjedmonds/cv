@@ -166,7 +166,7 @@
 %                Configuration for fonts
 %-------------------------------------------------------------------------------
 % Set the FontAwesome font to be up-to-date.
-\newfontfamily\FA[Path=\@fontdir]{FontAwesome}
+% \newfontfamily\FA[Path=\@fontdir]{FontAwesome}
 % Set font for header (default is Roboto)
 \newfontfamily\roboto[
   Path=\@fontdir,
@@ -282,6 +282,9 @@
 \newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{text} #1}}
 \newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{text} #1}}
 \newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text} #1}}
+
+% For elements of presentation
+\newcommand*{\presentationentrytitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\bfseries\color{text} #1}}
 
 % For elements of publication
 \newcommand*{\publicationcontributionstyle}{\fontsize{7pt}{1em}\bodyfont\color{text}}
@@ -700,6 +703,24 @@
     \ifempty{#2#3}
       {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
       {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
+      \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
+    % \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}} &
+    \descriptionstyle{#5} &
+  \end{tabular*}%
+  % if you want to have the description not be part of the tabular, comment above and uncomment this
+  % \descriptionstyle{#5}
+}
+
+% Define an entry of cv information
+% Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
+\newcommand*{\presentationentry}[5]{%
+  \vspace{-2mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 3cm} R{3cm}}
+    \ifempty{#2#3}
+      {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
+      {\presentationentrytitlestyle{#2} & \entrylocationstyle{#3} \\
       \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
     % \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}} &
     \descriptionstyle{#5} &
