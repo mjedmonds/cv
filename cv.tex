@@ -42,29 +42,7 @@
 
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad} % If you would like to change the social information separator from a pipe (|) to something else
 
-%----------------------------------------------------------------------------------------
-%	PERSONAL INFORMATION
-%	Comment any of the lines below if they are not required
-%----------------------------------------------------------------------------------------
-
-\name{Mark}{Edmonds}
-% \address{246-1002, Gwangmyeongmayrouge Apt. 86, Cheongna lime-ro, Seo-gu, Incheon-si, 404-180, Rep. of KOREA}
-% \mobile{(+82) 10-9030-1843}
-
-\email{mark@mjedmonds.com}
-\homepage{www.mjedmonds.com}
-\github{mjedmonds}
-\linkedin{mjedmonds}
-%\skype{skypeid}
-%\stackoverflow{SOid}{SOname}
-%\twitter{@twit}
-%\linkedin{linkedin name}
-%\reddit{reddit account}
-%\xing{xing name}
-%\extrainfo{test} % Other text you want to include on this line
-
-\position{Artifical Intelligence{\enskip\cdotp\enskip}Cognitive Science{\enskip\cdotp\enskip}Robotics} % Your expertise/fields
-% \quote{``Make the change that you want to see in the world."} % A quote or statement
+\input{common-sections/header.tex}
 
 \makecvfooter{\today}{Mark Edmonds~~~·~~~Curriculum Vitae}{\thepage} % Specify the letter footer with 3 arguments: (<left>, <center>, <right>), leave any of these blank if they are not needed
 
@@ -79,17 +57,17 @@
 %	Each section is imported separately, open each file in turn to modify content
 %----------------------------------------------------------------------------------------
 
-\input{cv-sections/education.tex}
+\input{common-sections/education.tex}
 \input{cv-sections/research-interests.tex}
-\input{cv-sections/journalpubs.tex}
-\input{cv-sections/conferencepubs.tex}
-\newpage
+\input{common-sections/skills.tex}
 \input{cv-sections/research.tex}
+% \newpage
 \input{cv-sections/experience.tex}
 
+\input{cv-sections/journalpubs.tex}
+\input{cv-sections/conferencepubs.tex}
 %\newpage % Force a new page for looks
 \newpage
-\input{cv-sections/skills.tex}
 %\input{cv-sections/extracurricular.tex}
 \input{cv-sections/honors.tex}
 % \newpage
