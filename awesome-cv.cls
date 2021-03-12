@@ -274,7 +274,8 @@
 % For fundamental structures
 \newcommand*{\headerfirstnamestyle}[1]{{\hspace{-8pt}\fontsize{\namefontsize}{1em}\headerfontlight\color{text} #1}}
 \newcommand*{\headerlastnamestyle}[1]{{\fontsize{\namefontsize}{1em}\headerfont\bfseries\color{text} #1}}
-\newcommand*{\headerpositionstyle}[1]{{\fontsize{\smallfontsize}{1em}\bodyfont\scshape\color{text} #1}}
+% \newcommand*{\headerpositionstyle}[1]{{\fontsize{\smallfontsize}{1em}\bodyfont\scshape\color{text} #1}}
+\newcommand*{\headerpositionstyle}[1]{{\fontsize{\smallfontsize}{1em}\bodyfont\itshape\color{text} #1}}
 \newcommand*{\headeraddressstyle}[1]{{\fontsize{\smallfontsize}{1em}\headerfont\itshape\color{text} #1}}
 \newcommand*{\headersocialstyle}[1]{{\fontsize{9pt}{1em}\headerfont\color{text} #1}}
 \newcommand*{\headerquotestyle}[1]{{\fontsize{\smallfontsize}{1em}\bodyfont\itshape\color{darktext} #1}}
@@ -284,9 +285,12 @@
 \newcommand*{\paragraphstyle}{\fontsize{\smallfontsize}{1em}\bodyfontlight\upshape\color{text}}
 
 % For elements of entry
-\newcommand*{\entrytitlestyle}[1]{{\fontsize{\normalfontsize}{1em}\bodyfont\bfseries\color{text} #1}}
+% \newcommand*{\entrytitlestyle}[1]{{\fontsize{\normalfontsize}{1em}\bodyfont\bfseries\color{text} #1}}
+\newcommand*{\entrytitlestyle}[1]{{\fontsize{\smallfontsize}{1em}\bodyfont\bfseries\color{text} #1}}
+\newcommand*{\entrysmalltitlestyle}[1]{{\fontsize{\smallfontsize}{1em}\bodyfont\bfseries\color{text} #1}}
 \newcommand*{\entrypositionstyle}[1]{{\fontsize{\smallfontsize}{1em}\bodyfont\color{text} #1}}
-\newcommand*{\entrydatestyle}[1]{{\fontsize{\smallfontsize}{1em}\bodyfontlight\slshape\color{text} #1}}
+% \newcommand*{\entrydatestyle}[1]{{\fontsize{\smallfontsize}{1em}\bodyfontlight\slshape\color{text} #1}}
+\newcommand*{\entrydatestyle}[1]{{\fontsize{\smallfontsize}{1em}\bodyfontlight\color{text} #1}}
 % \newcommand*{\entrylocationstyle}[1]{{\fontsize{\smallfontsize}{1em}\bodyfontlight\slshape\color{text} #1}}
 \newcommand*{\entrylocationstyle}[1]{{\fontsize{\smallfontsize}{1em}\bodyfontlight\color{text} #1}}
 \newcommand*{\descriptionstyle}[1]{{\fontsize{\smallfontsize}{1em}\bodyfontlight\upshape\color{text} #1}}
@@ -313,7 +317,7 @@
 
 % For elements of honor
 \newcommand*{\honortitlestyle}[1]{{\fontsize{\smallfontsize}{1em}\bodyfont\color{text} #1}}
-\newcommand*{\honorpositionstyle}[1]{{\fontsize{\smallfontsize}{1em}\bodyfont\bfseries\color{text} #1}}
+\newcommand*{\honorpositionstyle}[1]{\entrysmalltitlestyle{#1}}
 \newcommand*{\honordatestyle}[1]{{\fontsize{\smallfontsize}{1em}\bodyfont\color{text} #1}}
 % \newcommand*{\honorlocationstyle}[1]{{\fontsize{\smallfontsize}{1em}\bodyfontlight\slshape\color{text} #1}}
 \newcommand*{\honorlocationstyle}[1]{{\fontsize{\smallfontsize}{1em}\bodyfontlight\color{text} #1}}
@@ -731,13 +735,42 @@
   % \setlength{\extrarowheight}{0pt}
   \ifempty{#2#3}
   {\entrypositionstyle{#1} \hfill \entrydatestyle{#4}\\}
-  {\entrytitlestyle{#2} \hfill \entrylocationstyle{#3}\\
-  \entrypositionstyle{#1} \hfill \entrydatestyle{#4}\\}
+  % style below is multiline for position, title, location and date
+  % {\entrytitlestyle{#2} \hfill \entrylocationstyle{#3}\\
+  % \entrypositionstyle{#1} \hfill \entrydatestyle{#4}\\}
+  % single line
+  {\entrytitlestyle{#2}, \entrypositionstyle{#1}, \entrylocationstyle{#3} \hfill \entrydatestyle{#4}}
   % \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}} &
-  \vspace{1mm}
+
   \descriptionstyle{#5}
   % if you want to have the description not be part of the tabular, comment above and uncomment this
   % \descriptionstyle{#5}
+}
+
+\newcommand*{\educationentry}[3]{%
+  % \vspace{-2mm}
+  % \setlength\tabcolsep{0pt}
+  % \setlength{\extrarowheight}{0pt}
+  % style below is multiline for position, title, location and date
+  % {\entrytitlestyle{#2} \hfill \entrylocationstyle{#3}\\
+  % \entrypositionstyle{#1} \hfill \entrydatestyle{#4}\\}
+  % single line
+  \begin{flushleft}
+    \entrytitlestyle{#1}, \entrylocationstyle{#2}\\
+  % \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}} &
+  \vspace{1mm}
+  \descriptionstyle{#3}
+  \end{flushleft}
+  % if you want to have the description not be part of the tabular, comment above and uncomment this
+  % \descriptionstyle{#5}
+}
+
+\newcommand*{\educationdescription}[3]{%
+  \descriptionstyle{#1} \hfill \entrydatestyle{#2}\\
+  \ifempty{#3}
+  {% show nothing if no thesis title is specified
+  }
+  {\descriptionstyle{#3}\\}
 }
 
 % Define an entry of cv information
@@ -832,7 +865,7 @@
   \begin{center}
     \setlength\tabcolsep{1.5ex}
     \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l L{\textwidth * \real{0.9}}}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l Q{\textwidth * \real{0.9}}}
 }{%
     \end{tabular*}
   \end{center}
@@ -840,7 +873,7 @@
 % Define a line of cv information(skill)
 % Usage: \cvskill{<type>}{<skillset>}
 \newcommand*{\cvskill}[2]{%
-	\skilltypestyle{#1} & \skillsetstyle{#2} \\
+  \skilltypestyle{#1} & \skillsetstyle{#2} \\
 }
 
 % Define an environment for cvitems(for cventry)

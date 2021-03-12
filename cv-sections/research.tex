@@ -2,7 +2,7 @@
 %	SECTION TITLE
 %----------------------------------------------------------------------------------------
 
-\cvsection{Research}
+\cvsection{Research Experience}
 
 %----------------------------------------------------------------------------------------
 %	SECTION CONTENT
@@ -15,75 +15,129 @@
 % STICK TO "accomplished X measured by Y by doing Z" for the descriptions
 
 \cventry
-{Graduate Student Researcher; Center for Vision, Cognition, Learning, and Autonomy (VCLA)}
-{Causal Transfer Learning}
+{Computer Science Department, UCLA}
+{Graduate Student Researcher}
 {Los Angeles, CA}
-{Sep 2017 – Present}
+{Sep 2016 – Present}
 {
+\begin{flushleft}
+Humans build generalizable and explainable representations of their environment through interaction, observation, imitation, intervention, and language. The following research explores how artificial agents can use these five concepts to learn robust and transferable representations of tasks and environments. This work was done in a collaborative, team-based lab environment.
+\end{flushleft}
+%
+\begin{flushleft}
+\entrysmalltitlestyle{Imitation learning: Training a robot to twist open a medicine bottle}
+\end{flushleft}
+\vspace{-1mm}
 \begin{cvitems}
-\item Examining how causal knowledge can be incorporated into reinforcement learning to enable better knowledge transfer across task and environment domains.
-\item Matched human causal learning performance by decomposing causal representations into two Bayesian components: a bottom-up associative learning scheme and a top-down structure learning scheme.
-\item Studied how humans perform in causal transfer tasks and compared performance against state-of-the-art reinforcement learning algorithms.
+  \item Captured the complex human hand forces required to open seven different medicine bottles with a tactical glove covered in IMUs (inertial measurement units) and force sensors.
+  \item Constructed robot action planner using a haptic network, And-Or Graph, and the generalized Earley parser.
+  \item Questioned the common structure humans see in the procedure to open any medicine bottle vs. the widely varying forces and action sequences used by the robot for each bottle.  This prompted an investigation of abstraction and generalization, outlined in the next project.
+\end{cvitems}
+%
+\begin{flushleft}
+\entrysmalltitlestyle{Causal learning: Virtual escape room to examine how humans and AI learn transferable causal representations}
+\end{flushleft}
+\vspace{-1mm}
+\begin{cvitems}
+  \item Built virtual "escape room" to test causal generalization; surface-level features change room to room while each room is governed by a common abstract causal structure (series of levers) that describes the required actions to "unlock" the escape room.
+  \item Ran human subject experiments to verify human learners are capable of learning the correct abstract causal structure.
+  \item Built hierarchical Bayesian model to achieve similar performance as human learners.  This causal model was able to solve the escape room while six state-of-the-art model-free reinforcement learning algorithms failed at the task.
+  \item Result: Both structural abstraction and feature generalization are critical to transfer learning and generalization.
+\end{cvitems}
+%
+\begin{flushleft}
+\entrysmalltitlestyle{Explainable AI: How can robots explain their behavior to foster human trust?}
+\end{flushleft}
+\vspace{-1mm}
+\begin{cvitems}
+  \item Reexamined the imitation learning work by building explainable visual interfaces for the haptic network and And-Or Graph.
+  \item Examined how well these explanations fostered human trust, revealing that the model components that best-fostered human trust did not correspond to the model components that contributed to the best model performance.
+  \item Highlighted the need to consider explainability as a first-class citizen when building AI systems that interact with humans.
+\end{cvitems}
+%
+\begin{flushleft}
+\entrysmalltitlestyle{Representation learning: The role of language in building generalizable representations}
+\end{flushleft}
+\vspace{-1mm}
+\begin{cvitems}
+  \item Built a virtual environment using Unreal Engine 4 (UE4) for embodied AI that couples language (scene graph) and vision.
+  \item Using the environment to create a dataset consisting of images, scene graphs (language labels), and object segmentation.
+  \item The goal of this environment is to provide a playground to learn generalizable, commonsense representations where the latent representation is tightly coupled with language labels.
 \end{cvitems}
 }
 
 %------------------------------------------------
 
-\cventry
-{Graduate Student Researcher; Center for Vision, Cognition, Learning, and Autonomy (VCLA)}
-{Fostering Human Trust through Explainable AI (XAI)}
-{Los Angeles, CA}
-{Jan 2019 – Present}
-{
-\begin{cvitems}
-% \item Investigating the form of explanations that foster human trust and the computational models that support such explanations.
-\item Developing a computational model to generate explanations for robot behavior based on theory-of-mind (ToM) in a communicative learning setting.
-\item Fostered trust between robots and humans in an imitation learning setting by providing sequential, action-level explanations to human subjects. This work built off of my work on imitation learning using tactile feedback.
-\end{cvitems}
-}
+% \cventry
+% {Graduate Student Researcher; Center for Vision, Cognition, Learning, and Autonomy (VCLA)}
+% {Causal Transfer Learning}
+% {Los Angeles, CA}
+% {Sep 2017 – Present}
+% {
+% \begin{cvitems}
+% \item Examining how causal knowledge can be incorporated into reinforcement learning to enable better knowledge transfer across task and environment domains.
+% \item Matched human causal learning performance by decomposing causal representations into two Bayesian components: a bottom-up associative learning scheme and a top-down structure learning scheme.
+% \item Studied how humans perform in causal transfer tasks and compared performance against state-of-the-art reinforcement learning algorithms.
+% \end{cvitems}
+% }
 
 %------------------------------------------------
 
-\cventry
-{Graduate Student Researcher; Center for Vision, Cognition, Learning, and Autonomy (VCLA)}
-{Transferrable Representation Learning using Language Supervision}
-{Los Angeles, CA}
-{Jun 2019 – Present}
-{
-\begin{cvitems}
-\item Developing a photorealistic virtual environment (based on Unreal Engine) that provides semantic language labels for objects and actions occurring in the virtual agent's field of view.
-\item Examining the role of language in building generalizable, commonsense representations of the environment.
-% \item This work is inspired by research in child development and aims to build commonsense knowledge from interaction.
-\end{cvitems}
-}
+% \cventry
+% {Graduate Student Researcher; Center for Vision, Cognition, Learning, and Autonomy (VCLA)}
+% {Fostering Human Trust through Explainable AI (XAI)}
+% {Los Angeles, CA}
+% {Jan 2019 – Present}
+% {
+% \begin{cvitems}
+% % \item Investigating the form of explanations that foster human trust and the computational models that support such explanations.
+% \item Developing a computational model to generate explanations for robot behavior based on theory-of-mind (ToM) in a communicative learning setting.
+% \item Fostered trust between robots and humans in an imitation learning setting by providing sequential, action-level explanations to human subjects. This work built off of my work on imitation learning using tactile feedback.
+% \end{cvitems}
+% }
 
 %------------------------------------------------
 
-\cventry
-{Graduate Student Researcher; Center for Vision, Cognition, Learning, and Autonomy (VCLA)}
-{Imitation Learning using Tactile Feedback}
-{Los Angeles, CA}
-{Sep 2015 – Sep 2017}
-{
-\begin{cvitems}
-\item Transferred visually latent causal changes from a human demonstrator to a robot using a tactile glove, an And-Or graph, and neural networks.
-\item Utilized a manipulation policy that encodes long-term temporal constraints using an And-Or graph and leverages haptic feedback from human demonstrators to incorporate real-time sensor data.
-\item Deployed robot localization on a ROS-based Baxter robot combining SLAM (using RGB-D and LIDAR), wheel odometry, and IMU data through Kalman filtering.
-\end{cvitems}
-}
+% \cventry
+% {Graduate Student Researcher; Center for Vision, Cognition, Learning, and Autonomy (VCLA)}
+% {Transferrable Representation Learning using Language Supervision}
+% {Los Angeles, CA}
+% {Jun 2019 – Present}
+% {
+% \begin{cvitems}
+% \item Developing a photorealistic virtual environment (based on Unreal Engine) that provides semantic language labels for objects and actions occurring in the virtual agent's field of view.
+% \item Examining the role of language in building generalizable, commonsense representations of the environment.
+% % \item This work is inspired by research in child development and aims to build commonsense knowledge from interaction.
+% \end{cvitems}
+% }
 
 %------------------------------------------------
 
-\cventry
-{Undergraduate Researcher; Air Force Research Lab (AFRL)}
-{Declarative Memory Acceleration}
-{Dayton, OH}
-{May 2014 – Sep 2015}
-{
-\begin{cvitems}
-\item Accelerated the declarative memory module of AFRL's CECEP cognitive architecture (based on \href{http://act-r.psy.cmu.edu/}{ACT-R}) by leveraging the parallelization of CUDA, yielding a 100x speedup over the fastest existing implementation.
-\end{cvitems}
-}
+% \cventry
+% {Graduate Student Researcher; Center for Vision, Cognition, Learning, and Autonomy (VCLA)}
+% {Imitation Learning using Tactile Feedback}
+% {Los Angeles, CA}
+% {Sep 2015 – Sep 2017}
+% {
+% \begin{cvitems}
+% \item Transferred visually latent causal changes from a human demonstrator to a robot using a tactile glove, an And-Or graph, and neural networks.
+% \item Utilized a manipulation policy that encodes long-term temporal constraints using an And-Or graph and leverages haptic feedback from human demonstrators to incorporate real-time sensor data.
+% \item Deployed robot localization on a ROS-based Baxter robot combining SLAM (using RGB-D and LIDAR), wheel odometry, and IMU data through Kalman filtering.
+% \end{cvitems}
+% }
+
+%------------------------------------------------
+
+% \cventry
+% {Undergraduate Researcher; Air Force Research Lab (AFRL)}
+% {Declarative Memory Acceleration}
+% {Dayton, OH}
+% {May 2014 – Sep 2015}
+% {
+% \begin{cvitems}
+% \item Accelerated the declarative memory module of AFRL's CECEP cognitive architecture (based on \href{http://act-r.psy.cmu.edu/}{ACT-R}) by leveraging the parallelization of CUDA, yielding a 100x speedup over the fastest existing implementation.
+% \end{cvitems}
+% }
 
 %------------------------------------------------
 
