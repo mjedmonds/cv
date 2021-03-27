@@ -739,7 +739,11 @@
   % {\entrytitlestyle{#2} \hfill \entrylocationstyle{#3}\\
   % \entrypositionstyle{#1} \hfill \entrydatestyle{#4}\\}
   % single line
-  {\entrytitlestyle{#2}, \entrypositionstyle{#1}, \entrylocationstyle{#3} \hfill \entrydatestyle{#4}}
+  {\ifempty{#3}{
+    \entrytitlestyle{#2}, \entrypositionstyle{#1} \hfill \entrydatestyle{#4}
+  }{
+    \entrytitlestyle{#2}, \entrypositionstyle{#1}, \entrylocationstyle{#3} \hfill \entrydatestyle{#4}}
+  }
   % \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}} &
 
   \descriptionstyle{#5}
@@ -755,12 +759,12 @@
   % {\entrytitlestyle{#2} \hfill \entrylocationstyle{#3}\\
   % \entrypositionstyle{#1} \hfill \entrydatestyle{#4}\\}
   % single line
-  \begin{flushleft}
+  \begin{justify}
     \entrytitlestyle{#1}, \entrylocationstyle{#2}\\
   % \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}} &
   \vspace{1mm}
   \descriptionstyle{#3}
-  \end{flushleft}
+  \end{justify}
   % if you want to have the description not be part of the tabular, comment above and uncomment this
   % \descriptionstyle{#5}
 }
@@ -770,7 +774,12 @@
   \ifempty{#3}
   {% show nothing if no thesis title is specified
   }
-  {\descriptionstyle{#3}\\}
+  {
+    \vspace{-7mm}
+    \begin{cvitems}
+      \item {#3}
+    \end{cvitems}
+  }
 }
 
 % Define an entry of cv information
