@@ -288,6 +288,7 @@
 % \newcommand*{\entrytitlestyle}[1]{{\fontsize{\normalfontsize}{1em}\bodyfont\bfseries\color{text} #1}}
 \newcommand*{\entrytitlestyle}[1]{{\fontsize{\smallfontsize}{1em}\bodyfont\bfseries\color{text} #1}}
 \newcommand*{\entrysmalltitlestyle}[1]{{\fontsize{\smallfontsize}{1em}\bodyfont\bfseries\color{text} #1}}
+\newcommand*{\entrysmalltitlestyleit}[1]{{\fontsize{\smallfontsize}{1em}\bodyfont\itshape\color{text} #1}}
 \newcommand*{\entrypositionstyle}[1]{{\fontsize{\smallfontsize}{1em}\bodyfont\color{text} #1}}
 % \newcommand*{\entrydatestyle}[1]{{\fontsize{\smallfontsize}{1em}\bodyfontlight\slshape\color{text} #1}}
 \newcommand*{\entrydatestyle}[1]{{\fontsize{\smallfontsize}{1em}\bodyfontlight\color{text} #1}}
