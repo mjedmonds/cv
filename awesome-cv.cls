@@ -763,7 +763,7 @@
   \begin{justify}
     \entrytitlestyle{#1}, \entrylocationstyle{#2}\\
   % \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}} &
-  \vspace{1mm}
+  \vspace{1mm}% no space token, so the first degree line isn't indented
   \descriptionstyle{#3}
   \end{justify}
   % if you want to have the description not be part of the tabular, comment above and uncomment this

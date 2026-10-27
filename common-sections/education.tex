@@ -8,6 +8,18 @@
 %	SECTION CONTENT
 %----------------------------------------------------------------------------------------
 
+\ifresume
+% The resume lists degrees only (one line each); the CV adds advisors and theses.
+\begin{cventries}
+\educationentry{University of California, Los Angeles (UCLA)}{Los Angeles, CA}{%
+  \descriptionstyle{Ph.D. in Computer Science, Artificial Intelligence Concentration; Advisor: Prof. Song-Chun Zhu} \hfill \entrydatestyle{Sep 2021}\\%
+  \descriptionstyle{M.S. in Computer Science} \hfill \entrydatestyle{Jun 2017}%
+}
+\educationentry{University of Dayton}{Dayton, OH}{%
+  \descriptionstyle{B.S. in Computer Engineering; Magna Cum Laude} \hfill \entrydatestyle{May 2015}%
+}
+\end{cventries}
+\else
 \begin{cventries}
 
 %------------------------------------------------
@@ -35,3 +47,4 @@
 %------------------------------------------------
 
 \end{cventries}
+\fi

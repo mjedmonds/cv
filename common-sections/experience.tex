@@ -2,7 +2,7 @@
 %	SECTION TITLE
 %----------------------------------------------------------------------------------------
 
-\cvsection{Professional and Research Experience}
+\cvsection{Experience}
 
 %----------------------------------------------------------------------------------------
 %	SECTION CONTENT
@@ -17,7 +17,7 @@
 {Feb 2026 - Present}
 {
 \begin{cvitems}
-\item Develop end-to-end driving models and self-play reinforcement learning.
+\item Develop end-to-end driving models trained with imitation and self-play reinforcement learning.
 \item Joined GM through its acquisition of Cruise.
 \end{cvitems}
 }
@@ -29,10 +29,10 @@
 {Apr 2024 - Feb 2026}
 {
 \begin{cvitems}
-\item Built autoregressive foundation models for driving.
-\item Demonstrated scaling laws for autonomous driving.
-\item Applied imitation and reinforcement learning to trajectory generation.
-\item Distilled models for deployment.
+\item Co-developed DriveGPT, scaling autoregressive behavior models for driving to 1.4B parameters and 120M training segments ($\sim$50x more data than prior published models); demonstrated data and model scaling laws for driving (ICML 2025).
+\item Applied imitation and reinforcement learning to trajectory generation for trajectory planning.
+\item Distilled large behavior models into compact models for on-vehicle deployment.
+\item Co-inventor on a patent application for autoregressive models for autonomous agents (US 2026/0131822 A1).
 \end{cvitems}
 }
 
@@ -43,10 +43,13 @@
 {Oct 2021 - Apr 2024}
 {
 \begin{cvitems}
-\item Applied imitation learning to trajectory generation.
+\item Worked at the intersection of machine learning and motion planning on the Behavior Planning team, starting with maneuver planning.
+\item Applied imitation learning to trajectory generation for behavior planning; used PyTorch and ROS to deploy safer, more capable ML models to vehicles driving on public roads.
 \end{cvitems}
 }
 
+% Entries wrapped in \ifresume\else ... \fi appear only on the CV.
+\ifresume\else
 \cventry
 {Center for AI and Robot Autonomy (CARA)}
 {Director and President}
@@ -57,6 +60,7 @@
 \item Defined updated mission and vision statements, sought alternative funding, and filed paperwork to maintain 501(c)(3) status.
 \end{cvitems}
 }
+\fi
 
 \cventry
 {Computer Science Department, UCLA}
@@ -64,6 +68,14 @@
 {Los Angeles, CA}
 {Sep 2016 - Sep 2021}
 {
+\ifresume
+\begin{cvitems}
+  \item \textbf{Causal learning}: built \href{https://github.com/mjedmonds/OpenLock}{OpenLock}, an open-source virtual escape room in which every room shares an abstract causal structure (a sequence of levers) while surface features change, to test how humans and AI transfer causal knowledge. Ran human-subject experiments showing people discover and transfer the abstract structure, and developed a hierarchical Bayesian model combining abstract-level structure learning with instance-level induction that matched human transfer, while seven model-free RL algorithms failed (AAAI 2020 oral; CogSci 2018 oral; CogSci 2019).
+  \item \textbf{Imitation learning}: taught a robot to open medicine bottles from human demonstrations by integrating force and pose; captured hand forces and poses with a custom tactile glove (IMUs and force sensors) and planned robot actions with an embodied haptic model and a stochastic grammar (IROS 2017, two papers).
+  \item \textbf{Explainable AI}: extended the bottle-opening robot to explain its own behavior; showed that the explanations that best foster human trust differ from the components that drive task performance (Science Robotics 2019; covered by IEEE Spectrum).
+  \item Also contributed to abstract causal reasoning (CVPR 2021) and in situ human-robot value alignment (Science Robotics 2022).
+\end{cvitems}
+\else
 \begin{justify}
 Humans build generalizable and explainable representations of their environment through interaction, observation, imitation, intervention, and language. The following research produced from a collaborative, team-based lab explores how artificial agents can use these five concepts to learn robust and transferable representations of tasks and environments.
 \end{justify}
@@ -98,19 +110,10 @@ Humans build generalizable and explainable representations of their environment 
   \item Showed that robots may need to "think" one way to complete a task, but another way to explain their behavior; the explanations that best fostered trust were not the model components that best aided the robot to achieve the task.
   \item \underline{Result}: Consider explainability as a first-class citizen when building AI systems that interact with humans.
 \end{cvitems}
-%
-\begin{justify}
-\entrysmalltitlestyleit{Representation learning: The role of language in building generalizable representations}
-\end{justify}
-\vspace{-1mm}
-\begin{cvitems}
-  \item Created a virtual playground for embodied AI to learn interpretable, common-sense representations of its environment.
-  \item Built a simulated environment using Unreal Engine 4 (UE4) that couples language and vision in a scene graph.
-  \item Devised a dataset consisting of images, language labels, and object segmentation.
-  \item \underline{Ongoing}: Build representation learning algorithm to use language labels to decompose latent encoding of the environment.
-\end{cvitems}
+\fi
 }
 
+\ifresume\else
 \cventry
 {Center for AI and Robot Autonomy (CARA)}
 {Robotics Research Engineer Intern}
@@ -118,9 +121,10 @@ Humans build generalizable and explainable representations of their environment 
 {Jun 2018 - Mar 2020}
 {
 \begin{cvitems}
-\item Worked on representation learning project to couple vision and language (details under UCLA Graduate Student Researcher).
+\item Built a simulated environment in Unreal Engine 4 that couples vision and language in a scene graph for embodied AI research.
 \end{cvitems}
 }
+\fi
 
 \cventry
 {Air Force Research Lab (AFRL)}
@@ -136,6 +140,7 @@ Humans build generalizable and explainable representations of their environment 
 \end{cvitems}
 }
 
+\ifresume\else
 \cventry
 {Aviation Department, Garmin International}
 {Software Engineering Intern}
@@ -147,5 +152,6 @@ Humans build generalizable and explainable representations of their environment 
 \item Reduced testing time by 40\% and saved hundreds of vendor certification testing hours by optimizing simulation timing protocols and adhering to FAA safety standards.
 \end{cvitems}
 }
+\fi
 
 \end{cventries}
